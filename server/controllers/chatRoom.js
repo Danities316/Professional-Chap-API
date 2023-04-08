@@ -1,7 +1,7 @@
 export default {
-    initiate: async (req, res) => {},
-    postMessage: async (req, res) => {},
-    getRecentConversation: async (req, res) => {},
-    getConversationByRoomId: async (req, res) => {},
-    markConversationReadByRoomId: async (req, res) => {},
+    initiate: async (req, res) => {consol.log(req.body)},
+    postMessage: async (req, res) => {consol.log(req.body)},
+    getRecentConversation: async (req, res) => {consol.log(req.body)},
+    getConversationByRoomById: async (req, res) => {consol.log(req.body)},
+    markConversationReadByRoomById: async (req, res) => {consol.log(req.body)},
 }

@@ -1,6 +1,6 @@
 export default {
-    onGetAllUsers: async(req, res) => {},
-    onGetUserById: async(req, res) => {},
-    onCreateUser: async(req, res) => {},
-    onDeleteUserId: async (req, res) => {},
+    getAllUsers: async(req, res) => {console.log(req.body)},
+    getUserById: async(req, res) => {console.log(req.body)},
+    createUser: async(req, res) => {console.log(req.body)},
+    deleteUserById: async (req, res) => {console.log(req.body)},
 }

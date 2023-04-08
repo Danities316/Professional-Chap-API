@@ -7,12 +7,13 @@ import indexRouter from "./routes/index.js";
 import userRouter from "./routes/user.js";
 import chatRoomRouter from "./routes/chatRoom.js";
 import deleteRouter from "./routes/delete.js";
-import "../server/config/connection.js"
+
 // middlewares
 import { decode } from './middlewares/jwt.js';
 
 const app = express();
 //mongi connection
+import "../server/config/connection.js"
 
 
 /** Get port from environment and store in Express. */

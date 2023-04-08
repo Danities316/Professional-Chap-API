@@ -1,7 +1,7 @@
 const config = {
     database: {
-        url: '',
-        dbName: 'chatDatabase'
+        dbName: 'chatDatabase',
+        password: 'Ichaba%4035545177'
     }
 }
 

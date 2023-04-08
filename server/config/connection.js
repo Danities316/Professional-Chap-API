@@ -1,28 +1,26 @@
-import mongoose, { ConnectionStates } from "mongoose"; 
-import config from ".";
+import mongoose from "mongoose"; 
+import config from "./index.js";
 
-const connectionURL = "mongodb+srv://danities:Ichaba%4035545177@cluster0.iksrsrk.mongodb.net/chatDatabase?retryWrites=true&w=majority"
+
+mongoose.set("strictQuery", true);
+const connectionURL = `mongodb+srv://danities:${config.database.password}@cluster0.iksrsrk.mongodb.net/${config.database.dbName}?retryWrites=true&w=majority`
 
 mongoose.connect(connectionURL,{
-    userNewUrlParser: true,
-    useInifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 } 
 )
-mongoose.connect(connectionURL,{
-    userNewUrlParser: true,
-    useInifiedTopology: true
-} 
-)
-mongoose.connect.on('connected', () => {
+
+mongoose.connection.on('connected', () => {
     console.log('Mongo has connected successfully')
 } 
 )
-mongoose.connect.on('reconnected', () => {
+mongoose.connection.on('reconnected', () => {
     console.log('Mongo has reconnected')
 } 
 )
-mongoose.connect.on('error', (error) => {
-    console.log(`Mongo has connection has an error: ${error}`)
+mongoose.connection.on('error', (error) => {
+    console.log(`Mongoconnection has an error: ${error}`)
     mongoose.disconnect()
 } 
 )

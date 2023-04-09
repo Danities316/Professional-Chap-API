@@ -1,6 +1,6 @@
 const config = {
     database: {
-        dbName: 'chatDatabase',
+        dbName: 'ChatDatabase',
         password: 'Ichaba%4035545177'
     }
 }

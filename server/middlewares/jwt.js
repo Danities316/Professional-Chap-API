@@ -24,7 +24,7 @@ export const encode = async (req, res, next) => {
 }
 
 export const decode = async (req, res, next) => {
-    if(!req.headers[' authorization']){
+    if(!req.headers['authorization']){
         return res.status(400).json({ success: false, message: 'No access token provided' })
     }
     const accessToken = req.headers.authorization.split(' ')[1]
